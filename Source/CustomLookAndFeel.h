@@ -11,11 +11,12 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "../Resources/Gilroy.h"
 
 class CustomLookAndFeel : public juce::LookAndFeel_V4
 {
 public:
-    CustomLookAndFeel() {};
+    CustomLookAndFeel();
     ~CustomLookAndFeel() {};
 
     juce::Slider::SliderLayout getSliderLayout(juce::Slider& slider) override;

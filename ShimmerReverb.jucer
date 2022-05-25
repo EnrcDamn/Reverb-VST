@@ -3,6 +3,12 @@
 <JUCERPROJECT id="v2Db9U" name="ShimmerReverb" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="YXlOuR" name="ShimmerReverb">
+    <GROUP id="{35DC5A9D-BD53-D62C-54DF-48B52DEAA8CF}" name="Resources">
+      <FILE id="Oz7wsm" name="Gilroy-Medium.ttf" compile="0" resource="1"
+            file="Resources/Gilroy-Medium.ttf"/>
+      <FILE id="xxjUmF" name="Gilroy.cpp" compile="1" resource="0" file="Resources/Gilroy.cpp"/>
+      <FILE id="KD6bHt" name="Gilroy.h" compile="0" resource="0" file="Resources/Gilroy.h"/>
+    </GROUP>
     <GROUP id="{9FE9AAE1-9EDE-02D2-A786-76AE22A59B96}" name="Source">
       <FILE id="bKv9KE" name="NameLabel.h" compile="0" resource="0" file="Source/NameLabel.h"/>
       <FILE id="SmAXly" name="CustomLookAndFeel.cpp" compile="1" resource="0"

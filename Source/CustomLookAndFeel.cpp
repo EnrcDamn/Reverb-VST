@@ -10,6 +10,13 @@
 
 #include "CustomLookAndFeel.h"
 
+CustomLookAndFeel::CustomLookAndFeel()
+{
+    auto gilroyFont = juce::Typeface::createSystemTypefaceFor(Gilroy::GilroyMedium_ttf,
+                                                              Gilroy::GilroyMedium_ttfSize);
+    setDefaultSansSerifTypeface(gilroyFont);
+};
+
 juce::Slider::SliderLayout CustomLookAndFeel::getSliderLayout(juce::Slider& slider)
 {
     auto localBounds = slider.getLocalBounds();

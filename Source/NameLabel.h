@@ -3,7 +3,7 @@
 
     NameLabel.h
     Created: 25 May 2022 11:53:13am
-    Author:  enric
+    Author:  Enrico Damiani
 
   ==============================================================================
 */

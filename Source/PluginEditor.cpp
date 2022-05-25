@@ -62,8 +62,12 @@ void ShimmerReverbAudioProcessorEditor::paint (juce::Graphics& g)
     g.fillAll(black);
 
     g.setFont(30);
+    g.setColour(grey);
+    g.drawText("rev alpha 0", 200, 0, 200, 75, juce::Justification::centred);
+
+    g.setFont(16);
     g.setColour(offWhite);
-    g.drawText("enrcdamn", 200, 0, 200, 75, juce::Justification::centred);
+    g.drawText("enrcdamn", 500, 260, 80, 20, juce::Justification::centred);
 }
 
 void ShimmerReverbAudioProcessorEditor::resized()

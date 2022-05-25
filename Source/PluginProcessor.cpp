@@ -174,8 +174,8 @@ bool ShimmerReverbAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* ShimmerReverbAudioProcessor::createEditor()
 {
-    // TODO: remove temp UI
-    return new juce::GenericAudioProcessorEditor(*this);
+    return new ShimmerReverbAudioProcessorEditor(*this);
+    // return new juce::GenericAudioProcessorEditor(*this);
 }
 
 //==============================================================================

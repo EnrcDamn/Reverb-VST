@@ -14,4 +14,4 @@ The `CustomLookAndFeel` class is referenced from the amazing Suzuki Kengo [websi
 
 * **width**: controls the width of the signal. A larger width will add a more stereo character to the reverb texture.
 
-* **frz**: when enabled, it adds a continuous sustain to the current audio snippet, resulting in a never-ending reverb tail.
+* **frz**: the freeze control. When enabled, it adds a continuous sustain to the current audio snippet, resulting in a never-ending reverb tail.

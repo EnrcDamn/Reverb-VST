@@ -18,7 +18,7 @@ public:
 	NameLabel()
 	{
 		setFont(20.0f);
-		setColour(juce::Label::textColourId, grey);
+		setColour(juce::Label::textColourId, blackGrey);
 		setJustificationType(juce::Justification::centred);
 	}
 
@@ -26,5 +26,6 @@ public:
 
 private:
 	juce::Colour grey = juce::Colour::fromFloatRGBA(0.42f, 0.42f, 0.42f, 1.0f);
+	juce::Colour blackGrey = juce::Colour::fromFloatRGBA(0.2f, 0.2f, 0.2f, 1.0f);
 
 };

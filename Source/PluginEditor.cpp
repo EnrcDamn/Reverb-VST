@@ -34,15 +34,15 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     widthLabel.setText("width", juce::NotificationType::dontSendNotification);
     widthLabel.attachToComponent(&widthSlider, false);
 
-
-    //freezeButton.setButtonText(juce::String(juce::CharPointer_UTF8("∞")));
-    freezeButton.setButtonText(juce::String("frz"));
+    //juce::AttributedString attrString(L"❄");
+    //freezeButton.setButtonText(juce::String(attrString.getText()));
+    freezeButton.setButtonText(juce::String(juce::CharPointer_UTF8("\xe2\x88\x9e"))); // "∞" 
     freezeButton.setClickingTogglesState(true);
     freezeButton.setLookAndFeel(&customLookAndFeel);
     freezeButton.setColour(juce::TextButton::buttonColourId, juce::Colours::transparentWhite);
     freezeButton.setColour(juce::TextButton::buttonOnColourId, juce::Colours::transparentWhite);
     freezeButton.setColour(juce::TextButton::textColourOnId, yellow);
-    freezeButton.setColour(juce::TextButton::textColourOffId, grey);
+    freezeButton.setColour(juce::TextButton::textColourOffId, blackGrey);
 
     addAndMakeVisible(sizeSlider);
     addAndMakeVisible(dampSlider);
@@ -59,11 +59,11 @@ ReverbAudioProcessorEditor::~ReverbAudioProcessorEditor()
 //==============================================================================
 void ReverbAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    g.fillAll(black);
+    g.fillAll(grey);
 
-    g.setFont(30);
-    g.setColour(grey);
-    g.drawText("rev alpha 0", 200, 0, 200, 75, juce::Justification::centred);
+    g.setFont(40);
+    g.setColour(blackGrey);
+    g.drawText("revAlpha", 200, 0, 200, 75, juce::Justification::centred);
 
     g.setFont(16);
     g.setColour(offWhite);

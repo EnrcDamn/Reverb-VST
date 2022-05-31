@@ -106,7 +106,7 @@ juce::Label* CustomLookAndFeel::createSliderTextBox(juce::Slider& slider)
 
 juce::Font CustomLookAndFeel::getTextButtonFont(juce::TextButton&, int buttonHeight)
 {
-    return juce::Font{ "Gilroy", 34.f, 0 };
+    return juce::Font{ "Gilroy", 60.f, 0 };
 }
 
 

@@ -17,7 +17,7 @@ RotarySlider::RotarySlider()
     setLookAndFeel(&customLookAndFeel);
     setColour(juce::Slider::rotarySliderFillColourId, yellow);
     setColour(juce::Slider::textBoxTextColourId, blackGrey);
-    setColour(juce::Slider::textBoxOutlineColourId, grey);
+    setColour(juce::Slider::textBoxOutlineColourId, blackGrey);
     setVelocityBasedMode(true);
     setVelocityModeParameters(0.5, 1, 0.09, false);
     setRotaryParameters(juce::MathConstants<float>::pi * 1.25f,

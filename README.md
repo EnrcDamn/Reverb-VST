@@ -5,6 +5,8 @@ Implemented UI, basic master reverb DSP (from the `juce::dsp::Reverb` class) and
 
 The `CustomLookAndFeel` class is referenced from the amazing Suzuki Kengo [website](https://suzuki-kengo.dev/posts/dial-customization).
 
+![rev](assets/rev.png)
+
 ## Controls
 
 | Param | Description |

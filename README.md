@@ -1,5 +1,5 @@
-# Shimmer Reverb
-A Shimmer Reverb plugin in JUCE.
+# Reverb
+A reverb plugin in JUCE.
 
 Implemented UI, basic master reverb DSP (from the `juce::dsp::Reverb` class) and processor value tree.
 

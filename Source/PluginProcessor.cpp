@@ -10,7 +10,7 @@
 #include "PluginEditor.h"
 
 //==============================================================================
-ShimmerReverbAudioProcessor::ShimmerReverbAudioProcessor()
+ReverbAudioProcessor::ReverbAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
      : AudioProcessor (BusesProperties()
                      #if ! JucePlugin_IsMidiEffect
@@ -24,17 +24,17 @@ ShimmerReverbAudioProcessor::ShimmerReverbAudioProcessor()
 {
 }
 
-ShimmerReverbAudioProcessor::~ShimmerReverbAudioProcessor()
+ReverbAudioProcessor::~ReverbAudioProcessor()
 {
 }
 
 //==============================================================================
-const juce::String ShimmerReverbAudioProcessor::getName() const
+const juce::String ReverbAudioProcessor::getName() const
 {
     return JucePlugin_Name;
 }
 
-bool ShimmerReverbAudioProcessor::acceptsMidi() const
+bool ReverbAudioProcessor::acceptsMidi() const
 {
    #if JucePlugin_WantsMidiInput
     return true;
@@ -43,7 +43,7 @@ bool ShimmerReverbAudioProcessor::acceptsMidi() const
    #endif
 }
 
-bool ShimmerReverbAudioProcessor::producesMidi() const
+bool ReverbAudioProcessor::producesMidi() const
 {
    #if JucePlugin_ProducesMidiOutput
     return true;
@@ -52,7 +52,7 @@ bool ShimmerReverbAudioProcessor::producesMidi() const
    #endif
 }
 
-bool ShimmerReverbAudioProcessor::isMidiEffect() const
+bool ReverbAudioProcessor::isMidiEffect() const
 {
    #if JucePlugin_IsMidiEffect
     return true;
@@ -61,37 +61,37 @@ bool ShimmerReverbAudioProcessor::isMidiEffect() const
    #endif
 }
 
-double ShimmerReverbAudioProcessor::getTailLengthSeconds() const
+double ReverbAudioProcessor::getTailLengthSeconds() const
 {
     return 0.0;
 }
 
-int ShimmerReverbAudioProcessor::getNumPrograms()
+int ReverbAudioProcessor::getNumPrograms()
 {
     return 1;   // NB: some hosts don't cope very well if you tell them there are 0 programs,
                 // so this should be at least 1, even if you're not really implementing programs.
 }
 
-int ShimmerReverbAudioProcessor::getCurrentProgram()
+int ReverbAudioProcessor::getCurrentProgram()
 {
     return 0;
 }
 
-void ShimmerReverbAudioProcessor::setCurrentProgram (int index)
+void ReverbAudioProcessor::setCurrentProgram (int index)
 {
 }
 
-const juce::String ShimmerReverbAudioProcessor::getProgramName (int index)
+const juce::String ReverbAudioProcessor::getProgramName (int index)
 {
     return {};
 }
 
-void ShimmerReverbAudioProcessor::changeProgramName (int index, const juce::String& newName)
+void ReverbAudioProcessor::changeProgramName (int index, const juce::String& newName)
 {
 }
 
 //==============================================================================
-void ShimmerReverbAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+void ReverbAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     juce::dsp::ProcessSpec spec;
 
@@ -103,14 +103,14 @@ void ShimmerReverbAudioProcessor::prepareToPlay (double sampleRate, int samplesP
     rightReverb.prepare(spec);
 }
 
-void ShimmerReverbAudioProcessor::releaseResources()
+void ReverbAudioProcessor::releaseResources()
 {
     // When playback stops, you can use this as an opportunity to free up any
     // spare memory, etc.
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
-bool ShimmerReverbAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
+bool ReverbAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
 {
   #if JucePlugin_IsMidiEffect
     juce::ignoreUnused (layouts);
@@ -135,7 +135,7 @@ bool ShimmerReverbAudioProcessor::isBusesLayoutSupported (const BusesLayout& lay
 }
 #endif
 
-void ShimmerReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
+void ReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     juce::ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
@@ -167,26 +167,26 @@ void ShimmerReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer
 }
 
 //==============================================================================
-bool ShimmerReverbAudioProcessor::hasEditor() const
+bool ReverbAudioProcessor::hasEditor() const
 {
     return true; // (change this to false if you choose to not supply an editor)
 }
 
-juce::AudioProcessorEditor* ShimmerReverbAudioProcessor::createEditor()
+juce::AudioProcessorEditor* ReverbAudioProcessor::createEditor()
 {
-    return new ShimmerReverbAudioProcessorEditor(*this);
+    return new ReverbAudioProcessorEditor(*this);
     // return new juce::GenericAudioProcessorEditor(*this);
 }
 
 //==============================================================================
-void ShimmerReverbAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
+void ReverbAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
     // You should use this method to store your parameters in the memory block.
     // You could do that either as raw data, or use the XML or ValueTree classes
     // as intermediaries to make it easy to save and load complex data.
 }
 
-void ShimmerReverbAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
+void ReverbAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
     // You should use this method to restore your parameters from this memory block,
     // whose contents will have been created by the getStateInformation() call.
@@ -196,13 +196,13 @@ void ShimmerReverbAudioProcessor::setStateInformation (const void* data, int siz
 // This creates new instances of the plugin..
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
-    return new ShimmerReverbAudioProcessor();
+    return new ReverbAudioProcessor();
 }
 
 //==============================================================================
 //==============================================================================
 
-juce::AudioProcessorValueTreeState::ParameterLayout ShimmerReverbAudioProcessor::createParameterLayout()
+juce::AudioProcessorValueTreeState::ParameterLayout ReverbAudioProcessor::createParameterLayout()
 {
     juce::AudioProcessorValueTreeState::ParameterLayout layout;
 

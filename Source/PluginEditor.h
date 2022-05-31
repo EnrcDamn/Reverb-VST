@@ -17,18 +17,18 @@
 //==============================================================================
 /**
 */
-class ShimmerReverbAudioProcessorEditor  : public juce::AudioProcessorEditor
+class ReverbAudioProcessorEditor  : public juce::AudioProcessorEditor
 {
 public:
-    ShimmerReverbAudioProcessorEditor (ShimmerReverbAudioProcessor&);
-    ~ShimmerReverbAudioProcessorEditor() override;
+    ReverbAudioProcessorEditor (ReverbAudioProcessor&);
+    ~ReverbAudioProcessorEditor() override;
 
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
-    ShimmerReverbAudioProcessor& audioProcessor;
+    ReverbAudioProcessor& audioProcessor;
 
     NameLabel sizeLabel, dampLabel, wetLabel, widthLabel;
 
@@ -52,5 +52,5 @@ private:
     juce::Colour grey = juce::Colour::fromFloatRGBA(0.42f, 0.42f, 0.42f, 1.0f);
     juce::Colour black = juce::Colour::fromFloatRGBA(0.08f, 0.08f, 0.08f, 1.0f);
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ShimmerReverbAudioProcessorEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ReverbAudioProcessorEditor)
 };

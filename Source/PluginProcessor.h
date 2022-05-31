@@ -13,12 +13,12 @@
 //==============================================================================
 /**
 */
-class ShimmerReverbAudioProcessor  : public juce::AudioProcessor
+class ReverbAudioProcessor  : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    ShimmerReverbAudioProcessor();
-    ~ShimmerReverbAudioProcessor() override;
+    ReverbAudioProcessor();
+    ~ReverbAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -61,7 +61,7 @@ private:
     juce::dsp::Reverb leftReverb, rightReverb;
 
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ShimmerReverbAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ReverbAudioProcessor)
 };
 
 

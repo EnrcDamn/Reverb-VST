@@ -10,7 +10,7 @@
 #include "PluginEditor.h"
 
 //==============================================================================
-ShimmerReverbAudioProcessorEditor::ShimmerReverbAudioProcessorEditor (ShimmerReverbAudioProcessor& p)
+ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p),
     sizeSliderAttachment(audioProcessor.apvts, "size", sizeSlider),
     dampSliderAttachment(audioProcessor.apvts, "damp", dampSlider),
@@ -51,13 +51,13 @@ ShimmerReverbAudioProcessorEditor::ShimmerReverbAudioProcessorEditor (ShimmerRev
     addAndMakeVisible(freezeButton);
 }
 
-ShimmerReverbAudioProcessorEditor::~ShimmerReverbAudioProcessorEditor()
+ReverbAudioProcessorEditor::~ReverbAudioProcessorEditor()
 {
     freezeButton.setLookAndFeel(nullptr);
 }
 
 //==============================================================================
-void ShimmerReverbAudioProcessorEditor::paint (juce::Graphics& g)
+void ReverbAudioProcessorEditor::paint (juce::Graphics& g)
 {
     g.fillAll(black);
 
@@ -70,7 +70,7 @@ void ShimmerReverbAudioProcessorEditor::paint (juce::Graphics& g)
     g.drawText("enrcdamn", 500, 260, 80, 20, juce::Justification::centred);
 }
 
-void ShimmerReverbAudioProcessorEditor::resized()
+void ReverbAudioProcessorEditor::resized()
 {
     sizeSlider.setBounds(getWidth() / 5 - 35, getHeight() / 2 - 35, 70, 70);
     dampSlider.setBounds(getWidth() / 5 * 2 - 35, getHeight() / 2 - 35, 70, 70);

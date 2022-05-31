@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="v2Db9U" name="ShimmerReverb" projectType="audioplug" useAppConfig="0"
+<JUCERPROJECT id="v2Db9U" name="ReverbVST" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
               pluginName="revtest" pluginDesc="rev alpha 0">
-  <MAINGROUP id="YXlOuR" name="ShimmerReverb">
+  <MAINGROUP id="YXlOuR" name="ReverbVST">
     <GROUP id="{35DC5A9D-BD53-D62C-54DF-48B52DEAA8CF}" name="Resources">
       <FILE id="Oz7wsm" name="Gilroy-Medium.ttf" compile="0" resource="1"
             file="Resources/Gilroy-Medium.ttf"/>
